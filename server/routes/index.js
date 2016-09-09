@@ -8,7 +8,7 @@ const router = express.Router(); // eslint-disable-line new-cap
 
 const errorHandler = (err, req, res, next) => {
   console.error('request err', err);
-  res.send('error with request');
+  res.send({ message: 'error with request' });
 };
 
 router.use('/tasks', taskRoutes, errorHandler);
